@@ -625,7 +625,7 @@ net.Receive("JHUD_Notify", function()
   if #str > 2 then
     local sync = "  "..str[3]
     local gain = str[4]
-    local strafes = str[5]
+    local strafes = "#"..str[5]
 
     -- LocalPlayer():ChatPrint((sync or " xd  "))
     hook.Add("HUDPaint", "JHUD_Notify", function()
