@@ -230,7 +230,7 @@ local function DisplayJHUD(ply)
 
   -- sync
   if (#ply.JHUD.Jumps > 1) and (ply.JHUD.Settings["sync"]) then
-    table.insert(str, "  ")
+    table.insert(str, " | ")
     table.insert(str, "")
     table.insert(str, "("..tostring(sync).."%)")
   end
@@ -244,7 +244,7 @@ local function DisplayJHUD(ply)
     if (#ply.JHUD.Jumps > 1) then
     table.insert(str, " | ")
     table.insert(str, "")
-    table.insert(str, "#"..tostring(strafes))
+    table.insert(str, tostring(strafes))
   end
   NotifyJHUD(ply, str)
 end
